@@ -1,0 +1,181 @@
+
+<head>
+
+    <title>Premium Hero Banner</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+<section class="hero">
+
+    <!-- ===========================
+            LEFT CONTENT
+    ============================ -->
+
+    <div class="hero-left">
+
+        <h2> Discover Gurugram's</h2>
+        <h1> Top 30+ Schools</h1>
+        <p>ALL IN ONE PLACE</p>
+
+        <div class="hero-house">
+            <div class="badge-section location-info">
+                <h3>Apparel House,</h3>
+                <p>Sec 44, Gurugram</p>
+            </div>
+            
+            <div class="divider"></div>
+            
+            <div class="badge-section date-info">
+                <h4>2-3 August 2025</h4>
+                <p>Sat-Sun | 10AM - 6PM</p>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+    <!-- ===========================
+            CENTER IMAGE AREA
+    ============================ -->
+
+    <div class="hero-center">
+
+        <!-- Column 1 -->
+
+        <div class="image-column">
+
+            <div class="image-track">
+
+                <img src="https://picsum.photos/id/1011/350/600">
+
+                <img src="https://picsum.photos/id/1015/350/600">
+
+                <img src="https://picsum.photos/id/1016/350/600">
+
+                <!-- Duplicate -->
+
+                <img src="https://picsum.photos/id/1011/350/600">
+
+                <img src="https://picsum.photos/id/1015/350/600">
+
+                <img src="https://picsum.photos/id/1016/350/600">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Column 2 -->
+
+        <div class="image-column delay">
+
+            <div class="image-track">
+
+                <img src="https://picsum.photos/id/1025/350/600">
+
+                <img src="https://picsum.photos/id/1027/350/600">
+
+                <img src="https://picsum.photos/id/1035/350/600">
+
+                <!-- Duplicate -->
+
+                <img src="https://picsum.photos/id/1025/350/600">
+
+                <img src="https://picsum.photos/id/1027/350/600">
+
+                <img src="https://picsum.photos/id/1035/350/600">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Column 3 -->
+
+        <div class="image-column">
+
+            <div class="image-track">
+
+                <img src="https://picsum.photos/id/1041/350/600">
+
+                <img src="https://picsum.photos/id/1043/350/600">
+
+                <img src="https://picsum.photos/id/1045/350/600">
+
+                <!-- Duplicate -->
+
+                <img src="https://picsum.photos/id/1041/350/600">
+
+                <img src="https://picsum.photos/id/1043/350/600">
+
+                <img src="https://picsum.photos/id/1045/350/600">
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- ===========================
+            RIGHT FORM
+    ============================ -->
+
+    <div class="hero-form">
+
+        <h2> Enquire Now</h2>
+
+        <form onsubmit="submitForm(event)">
+            <input
+                type="text"
+                placeholder="Parent's Name">
+
+            <input
+                type="tel"
+                placeholder="Phone Number">
+
+            <textarea
+                rows="4"
+                placeholder="Which grade are you looking for?"></textarea>
+
+            <!-- <button
+                type="submit">
+                <span> → </span>
+                Submit
+            </button> -->
+            <button type="submit">
+
+                <span class="arrow">→</span>
+            
+                <span class="text">Submit</span>
+            
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+</body>
+<script>
+    function submitForm(event){
+    
+        event.preventDefault(); // Stops page reload
+    
+        // alert("Form Submitted");
+    
+    }
+</script>

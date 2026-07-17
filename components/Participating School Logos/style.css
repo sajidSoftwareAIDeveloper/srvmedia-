@@ -1,0 +1,210 @@
+/* ================= RESET ================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Archivo', sans-serif;
+}
+
+/* ================= PARTICIPATING SCHOOLS SECTION ================= */
+.schools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 30px;
+    /* heading → slider1 → slider2 */
+    width: 100%;
+}
+
+/* ================= HEADING ================= */
+.schools__title {
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 120%;
+    text-align: center;
+
+    background: linear-gradient(360deg, #000E38 0%, #3F186A 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ================= SLIDER CONTAINER ================= */
+.logo-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ================= SLIDER TRACK ================= */
+.logo-slider__track {
+    display: flex;
+    gap: 24px;
+    width: max-content;
+    animation: scroll-left 18s linear infinite;
+}
+
+/* Pause on hover or keyboard focus */
+.logo-slider:hover .logo-slider__track,
+.logo-slider:focus-within .logo-slider__track {
+    animation-play-state: paused;
+}
+
+/* ================= REVERSE SLIDER ================= */
+.logo-slider--reverse .logo-slider__track {
+    animation: scroll-right 18s linear infinite;
+}
+
+/* ================= LOGO CARD ================= */
+.logo-card {
+    width: 274px;
+    height: 120px;
+    background: #ffffff;
+    border: 1px solid #e8e7e7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Base image */
+.logo-card img {
+    object-fit: contain;
+}
+
+/* Size modifiers */
+/* 1 */
+.logo-card--1 img {
+    width: 120px;
+    height: 86px;
+}
+
+/* 2 */
+.logo-card--2 img {
+    width: 201px;
+    height: 86px;
+}
+
+/* 3 */
+.logo-card--3 img {
+    width: 92px;
+    height: 92.31px;
+}
+
+/* 4 */
+.logo-card--4 img {
+    width: 112px;
+    height: 112px;
+}
+
+/* 5 */
+.logo-card--5 img {
+    width: 92px;
+    height: 92.31px;
+}
+
+/* 6 */
+.logo-card--6 img {
+    width: 110px;
+    height: 99.82px;
+}
+
+/* 7 */
+.logo-card--7 img {
+    width: 110px;
+    height: 110px;
+}
+
+
+/* ================= ANIMATIONS ================= */
+@keyframes scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-right {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .schools {
+        row-gap: 20px;
+    }
+
+    .schools__title {
+        font-size: 24px;
+    }
+
+    .logo-slider__track {
+        animation-duration: 22s;
+    }
+
+    .logo-card {
+        width: 180px;
+        height: 100px;
+    }
+
+    /* 1 */
+    .logo-card--1 img {
+        width: 112px;
+        height: 80px;
+    }
+
+    /* 2 */
+    .logo-card--2 img {
+        width: 188px;
+        height: 80px;
+    }
+
+    /* 3 */
+    .logo-card--3 img {
+        width: 88px;
+        height: 88px;
+    }
+
+    /* 4 */
+    .logo-card--4 img {
+        width: 104px;
+        height: 104px;
+    }
+
+    /* 5 */
+    .logo-card--5 img {
+        width: 85px;
+        height: 86pxpx;
+    }
+
+    /* 6 */
+    .logo-card--6 img {
+        width: 104px;
+        height: 96px;
+    }
+
+    /* 7 */
+    .logo-card--7 img {
+        width: 104px;
+        height: 104px;
+    }
+
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .logo-slider__track {
+        animation: none;
+    }
+}
