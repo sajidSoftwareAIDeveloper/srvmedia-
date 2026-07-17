@@ -1,0 +1,127 @@
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Exhibition Section</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const slider = document.querySelector(".cards-slider");
+  const leftBtn = document.querySelector(".arrow-btn--left");
+  const rightBtn = document.querySelector(".arrow-btn--right");
+  const leftABtn = document.querySelector(".arrow--left");
+  const rightABtn = document.querySelector(".arrow--right");
+
+  if (!slider || !leftBtn || !rightBtn) return;
+  let scrollprev = 0;
+  function updateArrowState() {
+    // Left arrow active only when scrolled right
+    if (scrollprev <= slider.scrollLeft ) {
+      rightBtn.classList.add("is-active");
+      rightABtn.classList.add("is-active");
+      leftBtn.classList.remove("is-active");
+      leftABtn.classList.remove("is-active");
+    } else {
+      rightABtn.classList.remove("is-active");
+      rightBtn.classList.remove("is-active");
+      leftBtn.classList.add("is-active");
+      leftABtn.classList.add("is-active");
+    }
+    scrollprev = slider.scrollLeft;
+
+  }
+
+  leftBtn.addEventListener("click", () => {
+    slider.scrollBy({ left: -450, behavior: "smooth" });
+  });
+
+  rightBtn.addEventListener("click", () => {
+    slider.scrollBy({ left: 450, behavior: "smooth" });
+  });
+
+  slider.addEventListener("scroll", updateArrowState);
+
+  // Initial check
+  updateArrowState();
+});
+
+</script>
+
+
+
+  <section class="parent-section">
+
+    <!-- TOP SECTION -->
+    <div class="section-top">
+
+      <h2 class="section-top__title">
+        What Makes This Exhibition a Must-Visit
+      </h2>
+
+      <!-- SLIDER -->
+      <div class="cards-slider">
+        <div class="cards-track">
+
+          <div class="info-card">
+            <div class="info-card__icon"><img src="../../images/emoji0.jpg"></div>
+            <h3 class="info-card__title">Interact Directly with School Heads</h3>
+            <p class="info-card__text">Get answers straight from the experts</p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card__icon"><img src="../../images/emoji1.jpg"></div>
+            <h3 class="info-card__title">Compare Curriculum & Pedagogy</h3>
+            <p class="info-card__text">
+              Understand CBSE, ICSE, IB, Cambridge, Finnish & more
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card__icon"><img src="../../images/emoji2.jpg"></div>
+            <h3 class="info-card__title">Exclusive Fee Structures & Offers</h3>
+            <p class="info-card__text">
+              Access transparent information and offers
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card__icon"><img src="../../images/emoji3.jpg"></div>
+            <h3 class="info-card__title">Explore School Offerings</h3>
+            <p class="info-card__text">
+              Infrastructure, teaching style and culture
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-card__icon"><img src="../../images/emoji4.jpg"></div>
+            <h3 class="info-card__title">On-the-Spot Admissions</h3>
+            <p class="info-card__text">
+              Instant applications and expert counselling
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM CURVE -->
+    <div class="section-bottom">
+      <div class="bottom-arrows">
+
+        <button class="arrow-btn arrow-btn--left">
+          <span class="arrow arrow--left"></span>
+        </button>
+
+        <button class="arrow-btn arrow-btn--right">
+          <span class="arrow arrow--right"></span>
+        </button>
+
+      </div>
+    </div>
+
+
+  </section>
+
+</body>
