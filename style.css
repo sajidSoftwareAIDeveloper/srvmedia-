@@ -140,6 +140,14 @@ body {
     }
 }
 
+
+@media (max-width: 992px) {
+
+    .choose-school{
+        height: 420px !important;
+    }
+}
+
 @media (max-width: 768px) {
     .schools {
         row-gap: 20px;
@@ -201,16 +209,15 @@ body {
     }
 
     .hero-banner{
-        height: 1180px !important;
+        height: 1130px !important;
     }
     .participating-schools{
         height: 330px !important;
     }
-    .choose-school{
-        height: 590px !important;
-    }
+    /* .choose-school{
+        height: 420px !important;
+    } */
     .exhibition-section{
-        padding: 20px 0;
         height: 650px !important;
     }
 }
